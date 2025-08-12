@@ -14,7 +14,7 @@ type CustomChatOptions = Omit<ChatInit<UIMessage>, "transport"> &
 // It implements model switching and uses the custom chat transport,
 // making a nice reusable hook for chat functionality.
 export function useChat(model: LanguageModel, options?: CustomChatOptions) {
-  const transportRef = useRef<CustomChatTransport | null>(null);
+  const transportRef = useRef<CustomChatTransport | null>(null); // Using a ref here so we can update the model used in the transport without having to reload the page or recreate the transport
 
   if (!transportRef.current) {
     transportRef.current = new CustomChatTransport(model);

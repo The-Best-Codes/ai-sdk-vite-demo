@@ -1,69 +1,39 @@
-# React + TypeScript + Vite
+# AI SDK + Vite (no backend) Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple demo of using AI SDK v5 with Vite and no backend API route for streaming AI responses. It demonstrates how to integrate AI SDK into a Vite project without the need for a backend server. Don't mind the horrible UI, I promise I write better UIs than this for my real projects 😀
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Prerequisites
 
-## Expanding the ESLint configuration
+- [Node.js](https://nodejs.org/)
+- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Installation
 
-```js
-export default tseslint.config([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
+1. Clone the repository:
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+   ```bash
+   git clone https://github.com/The-Best-Codes/ai-sdk-vite-demo.git
+   cd ai-sdk-vite-demo
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+2. Install dependencies:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+   ```bash
+   npm install
+   ```
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
+3. Start the development server:
 
-export default tseslint.config([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to [http://localhost:5173](http://localhost:5173) to see the demo in action.
+
+---
+
+## How it works
+
+We can't use `@ai-sdk/react` directly in Vite because it requires a backend API route (e.g., `/api/chat`) to receive AI response streams from.
