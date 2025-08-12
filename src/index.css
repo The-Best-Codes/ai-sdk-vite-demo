@@ -12,3 +12,133 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+        sans-serif;
+    color: #111827;
+    background: #f9fafb;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+.header-inner {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 16px 24px;
+}
+
+.header-inner h1 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.chat-window {
+    flex: 1;
+    margin: 0 auto;
+    max-width: 1024px;
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.ai-msg,
+.user-msg {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.user-msg {
+    justify-content: flex-end;
+}
+
+.ai-msg .avatar-ai,
+.user-msg .avatar-user {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 9999px;
+    display: grid;
+    place-items: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.ai-msg .avatar-ai {
+    background: #3b82f6;
+}
+
+.user-msg .avatar-user {
+    background: #6b7280;
+}
+
+.bubble-ai,
+.bubble-user {
+    max-width: 70%;
+    word-wrap: break-word;
+    border-radius: 8px;
+    padding: 16px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+.bubble-ai {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.bubble-user {
+    background: #3b82f6;
+    color: #ffffff;
+}
+
+.input-area {
+    padding: 0 24px 24px;
+    margin: 0 auto;
+    max-width: 1024px;
+    width: 100%;
+}
+
+.input-error {
+    color: #ef4444;
+    margin-bottom: 12px;
+}
+
+.message-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.message-input:disabled {
+    background: #f3f4f6;
+    cursor: not-allowed;
+}
