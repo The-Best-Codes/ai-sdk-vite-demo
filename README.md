@@ -1,6 +1,7 @@
 # AI SDK + Vite (no backend) Demo
 
-This is a simple demo of using AI SDK v5 with Vite and no backend API route for streaming AI responses. It demonstrates how to integrate AI SDK into a Vite project without the need for a backend server. Don't mind the horrible UI, I promise I write better UIs than this for my real projects 😀
+This is a simple demo demonstrating how to use AI SDK v5 with Vite and no backend API route for streaming AI responses.
+Don't mind the horrible UI, I promise I write better UIs than this usually. The point of this project is to give you a basic scaffolding and let you do the UI yourself 😀
 
 ## Getting Started
 
