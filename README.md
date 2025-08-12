@@ -51,7 +51,7 @@ Instead, we create an in-browser "transport layer" that runs the AI SDK's
 3. A Vite client `.env` key
 
    ```toml
-   VITE_GOOGLE_GENERATIVE_AI_API_KEY=<YOUR_KEY>
+   VITE_GOOGLE_GENERATIVE_AI_API_KEY=****
    ```
 
    is used with `createGoogleGenerativeAI` at `src/ai/providers/google.ts`.
@@ -80,7 +80,7 @@ export const openai = createOpenAI({
 Add your API key to the `.env` file:
 
 ```toml
-VITE_OPENAI_API_KEY=<YOUR_KEY>
+VITE_OPENAI_API_KEY=****
 ```
 
 Then use the `openai` provider in your app instead (replace the `google` import with `openai`):
