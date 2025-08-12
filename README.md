@@ -50,7 +50,7 @@ Instead, we create an in-browser "transport layer" that runs the AI SDK's
 
 3. A Vite client `.env` key
 
-   ```toml
+   ```env
    VITE_GOOGLE_GENERATIVE_AI_API_KEY=replace-this-with-your-key
    ```
 
@@ -79,7 +79,7 @@ export const openai = createOpenAI({
 
 Add your API key to the `.env` file:
 
-```toml
+```env
 VITE_OPENAI_API_KEY=replace-this-with-your-key
 ```
 
