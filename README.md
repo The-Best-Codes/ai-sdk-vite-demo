@@ -1,7 +1,7 @@
 # AI SDK + Vite (no backend) Demo
 
 This is a simple demo demonstrating how to use AI SDK v5 with Vite and no backend API route for streaming AI responses.
-Don't mind the horrible UI, I promise I write better UIs than this usually. The point of this project is to give you a basic scaffolding and let you do the UI yourself 😀
+Don't mind the horrible UI, I promise I write better UIs than this usually. The point of this demo is to give you a basic starting point and let you do the UI yourself 😀
 
 ## Getting Started
 
@@ -38,8 +38,7 @@ Don't mind the horrible UI, I promise I write better UIs than this usually. The 
 ## How it works
 
 We can't use `@ai-sdk/react` directly in Vite because it requires a backend API route (e.g., `/api/chat`) to receive AI response streams from.
-Instead, we create an in-browser "transport layer" that runs the AI SDK's
-`streamText()` function, which works client-side. There are three main pieces to make the trick work:
+Instead, we create an in-browser "transport layer" that runs the AI SDK's `streamText()` function, which works client-side. There are three main pieces of the trick that make it work:
 
 1. `CustomChatTransport` (`src/ai/custom-chat-transport.ts`) implements the
    AI SDK's `ChatTransport` interface. We replace `reconnectToStream` with a no-op function and use `streamText` inside our custom `sendMessages` function, converting the output of `streamText` into a UI message stream (instead of model messages).
