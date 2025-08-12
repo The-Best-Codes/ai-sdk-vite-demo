@@ -6,6 +6,8 @@ import { UserMessage } from "./components/user-message";
 
 function App() {
   const model = google("gemini-2.0-flash");
+  // Notice that the useChat hook below it not the useChat hook from @ai-sdk/react,
+  // It's our custom wrapper from ./ai/hooks/use-chat.ts
   const { messages, sendMessage, status, error } = useChat(model, {
     /* options */
   });
