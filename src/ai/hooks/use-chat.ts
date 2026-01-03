@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/refs */
 import {
   type UIMessage,
   type UseChatOptions,
